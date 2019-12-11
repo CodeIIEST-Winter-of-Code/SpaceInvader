@@ -9,14 +9,14 @@ pygame.init()
 # create the screen
 screen = pygame.display.set_mode((800, 600))
 # background sounds
-mixer.music.load('background.wav')
+mixer.music.load('sounds/background.wav')
 mixer.music.play(-1)
 
 # background image
-background = pygame.image.load("background.png")
+background = pygame.image.load("img/background.png")
 # set title and icon
 pygame.display.set_caption("Space Invaders")
-icon = pygame.image.load('gameicon.png')
+icon = pygame.image.load('img/gameicon.png')
 pygame.display.set_icon(icon)
 
 # enemy icon
@@ -25,17 +25,17 @@ enemyX = []
 enemyY = []
 enemyX_change = []
 enemyY_change = []
-num_of_enemies = 8
+num_of_enemies = 6
 
 for i in range(num_of_enemies):
-    enemyImg.append(pygame.image.load('enemy.png'))
+    enemyImg.append(pygame.image.load('img/enemy.png'))
     enemyX.append(random.randint(0, 735))
     enemyY.append(random.randint(100, 150))
     enemyX_change.append(1)
     enemyY_change.append(30)
 
 # player (craft) icon and initial position
-playerImg = pygame.image.load('player.png')
+playerImg = pygame.image.load('img/player.png')
 playerX = 370
 playerY = 480
 playerX_change = 0
@@ -43,7 +43,7 @@ playerY_change = 0
 
 # ready- you can't see bullet on the screen, if fired, state is fire
 
-bulletImg = pygame.image.load('bullet.png')
+bulletImg = pygame.image.load('img/bullet.png')
 bulletX = 0
 bulletY = 480
 bulletX_change = 0
@@ -113,7 +113,7 @@ while running:
                 playerX_change = 2.5  # increase of x-axis value if right key pressed
             if event.key == pygame.K_SPACE:
                 if bullet_state == "ready":
-                    bullet_Sound = mixer.Sound('laser.wav')
+                    bullet_Sound = mixer.Sound('sounds/laser.wav')
                     bullet_Sound.play()
                     bulletX = playerX
                     fire_bullet(bulletX, bulletY)
@@ -154,7 +154,7 @@ while running:
             score_value += 1
             enemyX[i] = random.randint(0, 735)
             enemyY[i] = random.randint(100, 150)
-            explosion_Sound = mixer.Sound('explosion.wav')
+            explosion_Sound = mixer.Sound('sounds/explosion.wav')
             explosion_Sound.play()
         enemyX[i] += enemyX_change[i]
         enemy(enemyX[i], enemyY[i], i)
