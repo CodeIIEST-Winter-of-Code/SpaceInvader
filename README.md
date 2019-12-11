@@ -7,18 +7,23 @@
  * [PyGame](https://www.pygame.org/news) (type `pip install pygame` )
  ### How to run?
  #### Method 1
- * Download/clone to any directory you want
+ * Download/clone to any directory you want  
+ 
  ![](img/dlcl.png)
- * Press Shift+Right click in the directory created and click `Open Powershell Window here`
+ * Press Shift+Right click in the directory created and click `Open Powershell Window here`  
+ 
  ![](img/rclick.png)
- * type `python main.py`
+ * type `python main.py`  
+ 
  ![](img/terminal.png) 
     * _(not giving screenshots of game, see it yourself :P )_
  #### Method 2
  * Download and install [PyCharm community edition](https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=windows&code=PCC)
- * After installing and setting up, click on Open and select the SpaceInvader **folder**
+ * After installing and setting up, click on Open and select the SpaceInvader **folder**  
+ 
  ![](img/open.png)
- * Then when the project is loaded, click the Green play button(make sure to setup Python properly)
+ * Then when the project is loaded, click the Green play button(make sure to setup Python properly)  
+ 
  ![](img/play.png)
  
  
